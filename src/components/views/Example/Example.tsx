@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import * as three from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import styled from 'styled-components';
 
 export function Example() {
@@ -13,6 +14,7 @@ export function Example() {
 				position: [2, 2, 0],
 			}}
 		>
+			<OrbitControls />
 			<ambientLight />
 			<pointLight position={[10, 10, 10]} />
 			<Box />
