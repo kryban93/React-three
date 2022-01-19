@@ -1,4 +1,6 @@
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { Example } from './components/views/Example/Example';
+import { GlobalStyles } from './styles/GlobalStyles';
 import { Reset } from './styles/Reset';
 import { theme } from './styles/theme';
 
@@ -6,13 +8,16 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<Reset />
-			<div className="App">
-				<header className="App-header">
-					<h1>Try me</h1>
-				</header>
-			</div>
+			<GlobalStyles />
+			<StyledContainer>
+				<Example />
+			</StyledContainer>
 		</ThemeProvider>
 	);
 }
 
 export default App;
+
+const StyledContainer = styled.div`
+	height: 300px;
+`;
