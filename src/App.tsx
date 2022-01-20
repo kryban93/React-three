@@ -1,4 +1,6 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
+import { DotAnimation } from './components/views/DotAnimation/DotAnimation';
 import { Example } from './components/views/Example/Example';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { Reset } from './styles/Reset';
@@ -9,9 +11,13 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<Reset />
 			<GlobalStyles />
-			<StyledContainer>
-				<Example />
-			</StyledContainer>
+
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Example />} />
+					<Route path="/dots" element={<DotAnimation />} />
+				</Routes>
+			</BrowserRouter>
 		</ThemeProvider>
 	);
 }
