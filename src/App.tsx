@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { DotAnimation } from './components/views/DotAnimation/DotAnimation';
 import { Example } from './components/views/Example/Example';
 import { GlobalStyles } from './styles/GlobalStyles';
@@ -23,7 +23,3 @@ function App() {
 }
 
 export default App;
-
-const StyledContainer = styled.div`
-	height: 300px;
-`;
