@@ -8,6 +8,11 @@ html {
 	font-size: 16px;
 	line-height: 1.25rem;	
 }
+
+body {
+	height: 100vh;	
+}
+
 h1 {
 	font-size: 2rem; 
 }
