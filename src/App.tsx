@@ -4,6 +4,7 @@ import AirplaneModel from './components/views/AirplaneModel/AirplaneModel';
 import { DotAnimation } from './components/views/DotAnimation/DotAnimation';
 import { Example } from './components/views/Example/Example';
 import ModelContainer from './components/views/ModelPreview/ModelContainer';
+import RotatingBoxes from './components/views/RotatingBoxes/RotatingBoxes';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { Reset } from './styles/Reset';
 import { theme } from './styles/theme';
@@ -20,6 +21,7 @@ function App() {
 					<Route path="/dots" element={<DotAnimation />} />
 					<Route path="/airplane" element={<AirplaneModel />} />
 					<Route path="/gltfairplane" element={<ModelContainer />} />
+					<Route path="/rotatingboxes" element={<RotatingBoxes />} />
 				</Routes>
 			</BrowserRouter>
 		</ThemeProvider>
