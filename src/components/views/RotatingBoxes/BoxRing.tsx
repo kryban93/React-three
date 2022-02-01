@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import * as three from 'three';
 import changeToRadians from '../../../additional/changeToRadians';
 import BoxElement from './BoxElement';
 
@@ -8,6 +7,7 @@ export default function BoxRing({ count, radius, color, size }: BoxRingProps) {
 	useEffect(() => {
 		createRings();
 	}, []);
+
 	function createRings() {
 		const boxArray = [];
 		for (let i = 0; i < count; i += 1) {

@@ -9,7 +9,6 @@ export default function BoxElement({
 		<mesh
 			position={[sinus, 0, cosinus]}
 			rotation={[0, rotation, 0]}
-			receiveShadow
 			castShadow
 			key={`${sinus}`}
 		>

@@ -1,12 +1,14 @@
-import { Canvas } from '@react-three/fiber';
+import { useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import styled from 'styled-components';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, useHelper } from '@react-three/drei';
 import BoxRing from './BoxRing';
 
 export default function RotatingBoxes() {
 	return (
 		<StyledWrapper>
 			<Canvas
+				shadows
 				camera={{
 					near: 1,
 					far: 1000,
@@ -16,17 +18,21 @@ export default function RotatingBoxes() {
 			>
 				<OrbitControls enableDamping dampingFactor={0.06} />
 				<ambientLight />
-				<pointLight position={[10, 10, 0]} />
+				<SpotLight />
 				<axesHelper />
-				<mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 0]}>
+				<mesh
+					rotation={[-Math.PI / 2, 0, 0]}
+					position={[0, -2, 0]}
+					receiveShadow
+				>
 					<planeGeometry args={[200, 200]} />
-					<shadowMaterial opacity={0.1} />
+					<shadowMaterial opacity={0.15} />
 				</mesh>
-				<BoxRing radius={3} count={30} color="#F76E11" size={1} />
-				<BoxRing radius={6} count={40} color="#313552" size={1} />
-				<BoxRing radius={9} count={60} color="#B8405E" size={1} />
-				<BoxRing radius={12} count={80} color="#313552" size={1} />
-				<BoxRing radius={15} count={110} color="#B8405E" size={1} />
+				<BoxRing radius={4} count={30} color="#F76E11" size={1} />
+				<BoxRing radius={8} count={40} color="#313552" size={1.5} />
+				<BoxRing radius={12} count={50} color="#B8405E" size={1.75} />
+				<BoxRing radius={16} count={70} color="#313552" size={2} />
+				<BoxRing radius={20} count={80} color="#B8405E" size={2.25} />
 			</Canvas>
 		</StyledWrapper>
 	);
@@ -40,3 +46,11 @@ const StyledWrapper = styled.section`
 		rgba(138, 84, 170, 1) 100%
 	);
 `;
+
+function SpotLight() {
+	const light = useRef();
+	// useHelper(light, three.SpotLightHelper, '#fff');
+	return (
+		<spotLight ref={light} intensity={0.7} position={[0, 40, 20]} castShadow />
+	);
+}
