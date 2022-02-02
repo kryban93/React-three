@@ -4,6 +4,7 @@ import Nav from './components/ui/Nav/Nav';
 import AirplaneModel from './components/views/AirplaneModel/AirplaneModel';
 import { DotAnimation } from './components/views/DotAnimation/DotAnimation';
 import { Example } from './components/views/Example/Example';
+import MainView from './components/views/MainView/MainView';
 import ModelContainer from './components/views/ModelPreview/ModelContainer';
 import RotatingBoxes from './components/views/RotatingBoxes/RotatingBoxes';
 import { GlobalStyles } from './styles/GlobalStyles';
@@ -18,6 +19,7 @@ function App() {
 			<BrowserRouter>
 				<Nav />
 				<Routes>
+					<Route path="" element={<MainView />} />
 					<Route path="/box" element={<Example />} />
 					<Route path="/dots" element={<DotAnimation />} />
 					<Route path="/airplane" element={<AirplaneModel />} />
