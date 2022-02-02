@@ -16,7 +16,7 @@ type GLTFResult = GLTF & {
 	};
 };
 
-export default function AirplaneGLTFModel(
+export default function AirplaneGltfElement(
 	props: JSX.IntrinsicElements['group'],
 ) {
 	const group = useRef<three.Group>();

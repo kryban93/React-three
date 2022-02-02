@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import * as three from 'three';
 import { useFrame } from '@react-three/fiber';
 import changeToRadians from '../../../additional/changeToRadians';
-import BoxElement from '../../threeElements/BoxElement/BoxElement';
+import BoxElement from '../BoxElement/BoxElement';
 
 export default function BoxRing({
 	count = 20,
@@ -24,7 +24,7 @@ export default function BoxRing({
 				: (boxRingRef.current!.rotation.y -= 0.01);
 		}
 	});
-	console.log(boxRingRef);
+
 	function createRings() {
 		const boxArray = [];
 		for (let i = 0; i < count; i += 1) {

@@ -8,10 +8,6 @@ const routes = [
 		route: '/box',
 	},
 	{
-		name: 'dots',
-		route: '/dots',
-	},
-	{
 		name: 'airplane model',
 		route: '/gltfairplane',
 	},

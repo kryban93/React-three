@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import IcosahedronWithWireframe from '../../threeElements/IcosahedronWithWireframe/IcosahedronWithWireframe';
+import IcosahedronCanvas from '../../threeElements/IcosahedronCanvas/IcosahedronCanvas';
 
 export default function MainView() {
 	return (
@@ -9,7 +9,7 @@ export default function MainView() {
 				<h2>Checkout my three.js laboratory!</h2>
 				<h2>You can find there some of my works</h2>
 			</StyledTextWrapper>
-			<IcosahedronWithWireframe />
+			<IcosahedronCanvas />
 		</StyledWrapper>
 	);
 }

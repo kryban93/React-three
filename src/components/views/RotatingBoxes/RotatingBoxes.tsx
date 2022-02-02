@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import styled from 'styled-components';
 import { OrbitControls } from '@react-three/drei';
-import BoxRing from './BoxRing';
+import BoxRing from '../../threeElements/BoxRing/BoxRing';
 
 export default function RotatingBoxes() {
 	return (

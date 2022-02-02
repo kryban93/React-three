@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import IcosahedronElement from './IcosahedronElement';
+import IcosahedronElement from '../IcosahedronElement/IcosahedronElement';
 
-export default function IcosahedronWithWireframe() {
+export default function IcosahedronCanvas() {
 	return (
 		<StyledWrapper>
 			<Canvas

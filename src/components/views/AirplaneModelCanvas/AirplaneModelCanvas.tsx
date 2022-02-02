@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import styled from 'styled-components';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import AirplaneGLTFModel from './ModelPreview';
+import AirplaneGLTFModel from '../../threeElements/AirplaneGltfElement/AirplaneGltfElement';
 
 export default function ModelContainer() {
 	return (
