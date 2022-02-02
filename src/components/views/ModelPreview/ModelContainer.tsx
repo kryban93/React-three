@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import AirplaneGLTFModel from './ModelPreview';
+import { Suspense } from 'react';
 
 export default function ModelContainer() {
 	return (
@@ -25,8 +26,9 @@ export default function ModelContainer() {
 }
 
 const StyledWrapper = styled.section`
-	height: 70vh;
+	height: 100vh;
 	width: 100%;
 	display: flex;
 	align-items: center;
+	background: linear-gradient(90deg, #009988 0%, #597e8d 100%);
 `;

@@ -1,7 +1,7 @@
 import { useFrame } from '@react-three/fiber';
 import { useState, useEffect, useRef } from 'react';
 import changeToRadians from '../../../additional/changeToRadians';
-import BoxElement from './BoxElement';
+import BoxElement from '../../threeElements/BoxElement/BoxElement';
 
 export default function BoxRing({
 	count,
@@ -42,9 +42,9 @@ export default function BoxRing({
 		<group castShadow ref={boxRingRef}>
 			{boxesPosition.map((boxItem) => (
 				<BoxElement
-					sinus={boxItem.sinus}
-					cosinus={boxItem.cosinus}
-					rotation={boxItem.radialPosition}
+					xPosition={boxItem.sinus}
+					zPosition={boxItem.cosinus}
+					yRotation={boxItem.radialPosition}
 					color={color}
 					key={`${boxItem.sinus}${boxItem.cosinus}`}
 					size={size}

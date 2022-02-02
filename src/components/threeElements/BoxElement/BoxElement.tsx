@@ -1,16 +1,16 @@
 export default function BoxElement({
-	sinus,
-	cosinus,
+	xPosition,
+	zPosition,
 	color,
-	rotation,
+	yRotation,
 	size,
 }: BoxElementProps) {
 	return (
 		<mesh
-			position={[sinus, 0, cosinus]}
-			rotation={[0, rotation, 0]}
+			position={[xPosition, 0, zPosition]}
+			rotation={yRotation ? [0, yRotation, 0] : [0, 0, 0]}
 			castShadow
-			key={`${sinus}`}
+			key={`${xPosition}`}
 		>
 			<boxGeometry args={[size, size, size]} attach="geometry" />
 			<meshPhongMaterial color={color} attach="material" />
@@ -19,9 +19,9 @@ export default function BoxElement({
 }
 
 export type BoxElementProps = {
-	sinus: number;
-	cosinus: number;
+	xPosition: number;
+	zPosition: number;
 	color: string;
-	rotation: number;
-	size: number;
+	yRotation?: number;
+	size?: number;
 };

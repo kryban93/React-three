@@ -13,7 +13,7 @@ export default function RotatingBoxes() {
 					near: 1,
 					far: 1000,
 					zoom: 1,
-					position: [30, 40, 40],
+					position: [80, 50, 50],
 				}}
 			>
 				<OrbitControls enableDamping dampingFactor={0.06} />
