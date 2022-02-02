@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { theme } from '../../../styles/theme';
 
 const routes = [
 	{
@@ -51,5 +50,5 @@ const StyledLinksWrapper = styled.div`
 const StyledLink = styled(Link)`
 	font-size: ${({ theme }) => theme.fontSize.l};
 	text-decoration: none;
-	color: white;
+	color: ${({ theme }) => theme.white};
 `;

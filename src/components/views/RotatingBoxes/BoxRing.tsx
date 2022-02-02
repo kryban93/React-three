@@ -1,5 +1,6 @@
-import { useFrame } from '@react-three/fiber';
 import { useState, useEffect, useRef } from 'react';
+import * as three from 'three';
+import { useFrame } from '@react-three/fiber';
 import changeToRadians from '../../../additional/changeToRadians';
 import BoxElement from '../../threeElements/BoxElement/BoxElement';
 
@@ -10,7 +11,7 @@ export default function BoxRing({
 	size,
 	direction,
 }: BoxRingProps) {
-	const boxRingRef = useRef();
+	const boxRingRef = useRef<three.Group>();
 	const [boxesPosition, setBoxesPosition] = useState<stateProps[]>([]);
 	useEffect(() => {
 		createRings();

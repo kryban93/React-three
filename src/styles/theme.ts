@@ -3,6 +3,7 @@ export const theme: Partial<ThemeProps> = {
 	secondary: '#e76f51',
 	tertiary: '#2a9d8f',
 	quaternary: '#f4a261',
+	white: '#fff',
 	fontSize: {
 		s: '0.875rem',
 		m: '1rem',
@@ -23,6 +24,7 @@ export type ThemeProps = {
 	secondary: string;
 	tertiary: string;
 	quaternary: string;
+	white: string;
 	fontSize: {};
 	fontWeight: {};
 };
