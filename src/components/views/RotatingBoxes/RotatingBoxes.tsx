@@ -28,11 +28,41 @@ export default function RotatingBoxes() {
 					<planeGeometry args={[200, 200]} />
 					<shadowMaterial opacity={0.15} />
 				</mesh>
-				<BoxRing radius={4} count={30} color="#F76E11" size={1} />
-				<BoxRing radius={8} count={40} color="#313552" size={1.5} />
-				<BoxRing radius={12} count={50} color="#B8405E" size={1.75} />
-				<BoxRing radius={16} count={70} color="#313552" size={2} />
-				<BoxRing radius={20} count={80} color="#B8405E" size={2.25} />
+				<BoxRing
+					radius={4}
+					count={30}
+					color="#F76E11"
+					size={1}
+					direction="left"
+				/>
+				<BoxRing
+					radius={8}
+					count={40}
+					color="#313552"
+					size={1.5}
+					direction="right"
+				/>
+				<BoxRing
+					radius={12}
+					count={50}
+					color="#B8405E"
+					size={1.75}
+					direction="left"
+				/>
+				<BoxRing
+					radius={16}
+					count={70}
+					color="#313552"
+					size={2}
+					direction="right"
+				/>
+				<BoxRing
+					radius={20}
+					count={80}
+					color="#B8405E"
+					size={2.25}
+					direction="left"
+				/>
 			</Canvas>
 		</StyledWrapper>
 	);

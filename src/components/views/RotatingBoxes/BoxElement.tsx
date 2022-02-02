@@ -12,8 +12,8 @@ export default function BoxElement({
 			castShadow
 			key={`${sinus}`}
 		>
-			<boxGeometry args={[size, size, size]} />
-			<meshPhongMaterial color={color} />
+			<boxGeometry args={[size, size, size]} attach="geometry" />
+			<meshPhongMaterial color={color} attach="material" />
 		</mesh>
 	);
 }

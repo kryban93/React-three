@@ -1,13 +1,29 @@
-import { useState, useEffect } from 'react';
+import { useFrame } from '@react-three/fiber';
+import { useState, useEffect, useRef } from 'react';
 import changeToRadians from '../../../additional/changeToRadians';
 import BoxElement from './BoxElement';
 
-export default function BoxRing({ count, radius, color, size }: BoxRingProps) {
+export default function BoxRing({
+	count,
+	radius,
+	color,
+	size,
+	direction,
+}: BoxRingProps) {
+	const boxRingRef = useRef();
 	const [boxesPosition, setBoxesPosition] = useState<stateProps[]>([]);
 	useEffect(() => {
 		createRings();
 	}, []);
 
+	useFrame(() => {
+		if (boxRingRef.current) {
+			direction === 'left'
+				? (boxRingRef.current!.rotation.y += 0.01)
+				: (boxRingRef.current!.rotation.y -= 0.01);
+		}
+	});
+	console.log(boxRingRef);
 	function createRings() {
 		const boxArray = [];
 		for (let i = 0; i < count; i += 1) {
@@ -23,7 +39,7 @@ export default function BoxRing({ count, radius, color, size }: BoxRingProps) {
 	}
 
 	return (
-		<group castShadow>
+		<group castShadow ref={boxRingRef}>
 			{boxesPosition.map((boxItem) => (
 				<BoxElement
 					sinus={boxItem.sinus}
@@ -44,6 +60,7 @@ export type BoxRingProps = {
 	radius: number;
 	color: string;
 	size: number;
+	direction: 'left' | 'right';
 };
 
 type stateProps = {
