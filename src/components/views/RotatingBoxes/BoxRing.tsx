@@ -5,11 +5,11 @@ import changeToRadians from '../../../additional/changeToRadians';
 import BoxElement from '../../threeElements/BoxElement/BoxElement';
 
 export default function BoxRing({
-	count,
-	radius,
-	color,
-	size,
-	direction,
+	count = 20,
+	radius = 20,
+	color = '#cac',
+	size = 1,
+	direction = 'left',
 }: BoxRingProps) {
 	const boxRingRef = useRef<three.Group>();
 	const [boxesPosition, setBoxesPosition] = useState<stateProps[]>([]);

@@ -3,7 +3,9 @@ export default function SphereElement({
 	zPosition,
 	color,
 	yRotation,
-	size,
+	heightSegments = 1,
+	widthSegments = 1,
+	radius = 1,
 }: BoxElementProps) {
 	return (
 		<mesh
@@ -12,7 +14,10 @@ export default function SphereElement({
 			castShadow
 			key={`${xPosition}`}
 		>
-			<boxGeometry args={[size, size, size]} attach="geometry" />
+			<sphereGeometry
+				args={[radius, heightSegments, widthSegments]}
+				attach="geometry"
+			/>
 			<meshPhongMaterial color={color} attach="material" />
 		</mesh>
 	);
@@ -23,5 +28,7 @@ export type BoxElementProps = {
 	zPosition: number;
 	color: string;
 	yRotation?: number;
-	size?: number;
+	radius?: number;
+	widthSegments: number;
+	heightSegments: number;
 };

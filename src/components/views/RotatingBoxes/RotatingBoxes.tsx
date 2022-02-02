@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import styled from 'styled-components';
-import { OrbitControls, useHelper } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import BoxRing from './BoxRing';
 
 export default function RotatingBoxes() {
@@ -79,7 +79,7 @@ const StyledWrapper = styled.section`
 
 function SpotLight() {
 	const light = useRef();
-	// useHelper(light, three.SpotLightHelper, '#fff');
+
 	return (
 		<spotLight ref={light} intensity={0.7} position={[0, 40, 20]} castShadow />
 	);
