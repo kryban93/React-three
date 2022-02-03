@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import styled from 'styled-components';
 import AirplaneGltfElement from '../../threeElements/AirplaneGltfElement/AirplaneGltfElement';
 import GltfModelCanvas from '../../threeElements/GltfModelCanvas/GltfModelCanvas';
 import DinosaurGtlfElement from '../../threeElements/DinosaurGltfElement/DinosaurGltfElement';
 import ModelSelector from '../../ui/ModelSelector/ModelSelector';
+import { Example } from '../Example/Example';
 
 export default function ModelsPreview() {
 	const [selectedModel, setSelectedModel] = useState<string>();
@@ -16,8 +17,10 @@ export default function ModelsPreview() {
 		<StyledWrapper>
 			<ModelSelector selectFunction={selectFunction} />
 			<GltfModelCanvas>
-				{selectedModel === 'airplane' ? <AirplaneGltfElement /> : null}
-				{selectedModel === 'dinosaur' ? <DinosaurGtlfElement /> : null}
+				<Suspense fallback={<Example />}>
+					{selectedModel === 'airplane' ? <AirplaneGltfElement /> : null}
+					{selectedModel === 'dinosaur' ? <DinosaurGtlfElement /> : null}
+				</Suspense>
 			</GltfModelCanvas>
 		</StyledWrapper>
 	);

@@ -22,7 +22,7 @@ export default function AirplaneGltfElement(
 	const group = useRef<three.Group>();
 	const { nodes, materials } = useGLTF('/Airplane.glb') as any;
 	return (
-		<group ref={group} {...props} dispose={null}>
+		<group ref={group} {...props} dispose={null} scale={[8, 8, 8]}>
 			<mesh
 				castShadow
 				receiveShadow
