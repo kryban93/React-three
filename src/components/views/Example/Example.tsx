@@ -6,20 +6,41 @@ import styled from 'styled-components';
 
 export function Example() {
 	return (
-		<StyledCanvas
-			camera={{
-				near: 1,
-				far: 1000,
-				zoom: 1,
-				position: [2, 2, 0],
-			}}
-		>
-			<OrbitControls />
-			<ambientLight />
-			<pointLight position={[10, 10, 10]} />
-			<Box />
-			<axesHelper />
-		</StyledCanvas>
+		<StyledWrapper>
+			<Canvas
+				shadows
+				camera={{
+					near: 1,
+					far: 1000,
+					zoom: 1,
+					position: [2, 2, 0],
+				}}
+			>
+				<OrbitControls />
+				<ambientLight color="#fff" intensity={0.5} />
+				<directionalLight
+					color="#fff"
+					intensity={1}
+					position={[10, 0, 0]}
+					castShadow
+				/>
+				<directionalLight
+					color="#af7527"
+					intensity={50}
+					position={[7.5, -10, 5]}
+					castShadow
+				/>
+				<directionalLight
+					color="#3a0d55"
+					intensity={1}
+					position={[-10, -5, 20]}
+					castShadow
+				/>
+				<pointLight position={[10, 10, 10]} />
+				<Box />
+				<axesHelper />
+			</Canvas>
+		</StyledWrapper>
 	);
 }
 
@@ -39,4 +60,6 @@ function Box() {
 	);
 }
 
-const StyledCanvas = styled(Canvas)``;
+const StyledWrapper = styled.section`
+	height: 100vh;
+`;
