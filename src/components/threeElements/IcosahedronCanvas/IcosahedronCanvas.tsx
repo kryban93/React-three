@@ -12,25 +12,33 @@ export default function IcosahedronCanvas() {
 					near: 1,
 					far: 110,
 					zoom: 1,
-					position: [10, 10, 10],
+					position: [0, 0, 20],
 				}}
 			>
 				<OrbitControls enableDamping dampingFactor={0.06} />
-				<ambientLight />
-				<directionalLight color="#fff" intensity={1} position={[10, 5, -5]} />
+				<ambientLight color="#999999" intensity={0.1} />
 				<directionalLight
-					color="#af7527"
-					intensity={1}
-					position={[0, 15, -10]}
+					color="#ffffff"
+					intensity={0.5}
+					position={[1, 1, 0]}
+					castShadow
 				/>
 				<directionalLight
-					color="#3a0d55"
+					color="#7209b7"
 					intensity={1}
-					position={[-10, -5, 20]}
+					position={[-1, 2, 0]}
+					castShadow
 				/>
-				<IcosahedronElement size={7} wireframe />
-				<IcosahedronElement size={5} />
-				<axesHelper />
+				<directionalLight
+					color="#f3722c"
+					intensity={1}
+					position={[1, -0.5, 0]}
+					castShadow
+				/>
+
+				<IcosahedronElement size={9} wireframe direction="left" />
+				<IcosahedronElement size={6} direction="right" />
+				<axesHelper scale={[8, 8, 8]} />
 			</Canvas>
 		</StyledWrapper>
 	);

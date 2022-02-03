@@ -16,6 +16,7 @@ export default function MainView() {
 
 const StyledWrapper = styled.section`
 	display: flex;
+	box-sizing: border-box;
 	align-items: center;
 	justify-content: space-around;
 	height: 100vh;
