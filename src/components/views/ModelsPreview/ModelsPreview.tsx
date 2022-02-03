@@ -1,12 +1,23 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import AirplaneGltfElement from '../../threeElements/AirplaneGltfElement/AirplaneGltfElement';
 import GltfModelCanvas from '../../threeElements/GltfModelCanvas/GltfModelCanvas';
+import DinosaurGtlfElement from '../../threeElements/DinosaurGltfElement/DinosaurGltfElement';
+import ModelSelector from '../../ui/ModelSelector/ModelSelector';
 
 export default function ModelsPreview() {
+	const [selectedModel, setSelectedModel] = useState<string>();
+
+	const selectFunction = (value: string) => {
+		setSelectedModel(value);
+		console.log(value);
+	};
 	return (
 		<StyledWrapper>
+			<ModelSelector selectFunction={selectFunction} />
 			<GltfModelCanvas>
-				<AirplaneGltfElement />
+				{selectedModel === 'airplane' ? <AirplaneGltfElement /> : null}
+				{selectedModel === 'dinosaur' ? <DinosaurGtlfElement /> : null}
 			</GltfModelCanvas>
 		</StyledWrapper>
 	);
