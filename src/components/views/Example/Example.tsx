@@ -3,43 +3,25 @@ import * as three from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import styled from 'styled-components';
+import CanvasElement from '../../threeElements/CanvasElement/CanvasElement';
 
 export function Example() {
 	return (
 		<StyledWrapper>
-			<Canvas
-				shadows
-				camera={{
+			<CanvasElement
+				cameraOptions={{
 					near: 1,
 					far: 1000,
 					zoom: 1,
-					position: [2, 2, 0],
+					position: new three.Vector3(2, 2, 2),
 				}}
+				orbitControls
+				ambientLight
+				pointLight
+				pointLightPosition={new three.Vector3(10, 0, 0)}
 			>
-				<OrbitControls />
-				<ambientLight color="#fff" intensity={0.5} />
-				<directionalLight
-					color="#fff"
-					intensity={1}
-					position={[10, 0, 0]}
-					castShadow
-				/>
-				<directionalLight
-					color="#af7527"
-					intensity={50}
-					position={[7.5, -10, 5]}
-					castShadow
-				/>
-				<directionalLight
-					color="#3a0d55"
-					intensity={1}
-					position={[-10, -5, 20]}
-					castShadow
-				/>
-				<pointLight position={[10, 10, 10]} />
 				<Box />
-				<axesHelper />
-			</Canvas>
+			</CanvasElement>
 		</StyledWrapper>
 	);
 }

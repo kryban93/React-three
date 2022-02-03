@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
-import styled from 'styled-components';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React from 'react';
+
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import AirplaneGLTFModel from '../AirplaneGltfElement/AirplaneGltfElement';
 
 export default function GltfModelCanvas({ children }: GltfModelCanvasProps) {
 	return (
