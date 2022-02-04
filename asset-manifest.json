@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/React-three/static/css/main.e6c13ad2.css",
-    "main.js": "/React-three/static/js/main.8e84b170.js",
-    "static/js/787.d5161de2.chunk.js": "/React-three/static/js/787.d5161de2.chunk.js",
-    "static/media/logo.svg": "/React-three/static/media/logo.2feb080c473dca9aece7742dc7c55566.svg",
-    "index.html": "/React-three/index.html",
-    "main.e6c13ad2.css.map": "/React-three/static/css/main.e6c13ad2.css.map",
-    "main.8e84b170.js.map": "/React-three/static/js/main.8e84b170.js.map",
-    "787.d5161de2.chunk.js.map": "/React-three/static/js/787.d5161de2.chunk.js.map"
+    "main.css": "/Threejs_React_Typescript/static/css/main.0bbc5108.css",
+    "main.js": "/Threejs_React_Typescript/static/js/main.76fa2f95.js",
+    "static/js/787.fba45a01.chunk.js": "/Threejs_React_Typescript/static/js/787.fba45a01.chunk.js",
+    "index.html": "/Threejs_React_Typescript/index.html",
+    "static/media/logo.svg": "/Threejs_React_Typescript/static/media/logo.2feb080c473dca9aece7742dc7c55566.svg",
+    "main.0bbc5108.css.map": "/Threejs_React_Typescript/static/css/main.0bbc5108.css.map",
+    "main.76fa2f95.js.map": "/Threejs_React_Typescript/static/js/main.76fa2f95.js.map",
+    "787.fba45a01.chunk.js.map": "/Threejs_React_Typescript/static/js/787.fba45a01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.8e84b170.js"
+    "static/css/main.0bbc5108.css",
+    "static/js/main.76fa2f95.js"
   ]
 }

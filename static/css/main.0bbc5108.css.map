@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.0bbc5108.css","mappings":"0FACA,KACC,4BAAgC,CAChC,cAAe,CACf,mBACD","sources":["index.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap');\nhtml {\n\tfont-family: 'Arimo', sans-serif;\n\tfont-size: 16px;\n\tline-height: 1.25rem;\n}\n"],"names":[],"sourceRoot":""}
