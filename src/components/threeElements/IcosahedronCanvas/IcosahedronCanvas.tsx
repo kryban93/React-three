@@ -46,7 +46,7 @@ export default function IcosahedronCanvas() {
 
 const StyledWrapper = styled.section`
 	height: 70%;
-	width: 50%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 `;

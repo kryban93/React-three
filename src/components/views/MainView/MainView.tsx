@@ -16,12 +16,17 @@ export default function MainView() {
 
 const StyledWrapper = styled.section`
 	display: flex;
+	flex-direction: column;
 	box-sizing: border-box;
 	align-items: center;
 	justify-content: space-around;
 	height: 100vh;
-	padding-top: 70px;
+	padding-top: 100px;
 	background: linear-gradient(164deg, #3a0d55 44%, #af7527 100%);
+
+	@media (min-width: 1024px) {
+		flex-direction: row;
+	}
 `;
 
 const StyledTextWrapper = styled.div`
@@ -29,7 +34,7 @@ const StyledTextWrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width 50%;
+	width 100%;
 	color: ${({ theme }) => theme.white}; 
 
 `;
