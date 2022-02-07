@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import icons from '../../../assets/icons/index';
-import useWindowDimenions from '../../../additional/useWindowDimensions';
 
 const routes = [
 	{
@@ -16,6 +15,10 @@ const routes = [
 	{
 		name: 'rotating boxes',
 		route: '/rotatingboxes',
+	},
+	{
+		name: 'particles waves',
+		route: '/particleswaves',
 	},
 ];
 
@@ -58,6 +61,10 @@ const StyledNav = styled.nav`
 	position: fixed;
 	z-index: 2;
 	padding: 10px;
+
+	@media screen and (min-width: 1356px) {
+		padding: 10px 20%;
+	}
 `;
 const StyledLinksWrapper = styled.div`
 	box-sizing: border-box;

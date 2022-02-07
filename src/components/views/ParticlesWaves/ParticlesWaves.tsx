@@ -1,10 +1,9 @@
-import { useRef } from 'react';
 import * as three from 'three';
-import { useFrame } from '@react-three/fiber';
 import styled from 'styled-components';
 import CanvasElement from '../../threeElements/CanvasElement/CanvasElement';
+import ParticlesElement from '../../threeElements/ParticlesElement/ParticlesElement';
 
-export function Example() {
+export default function ParticlesWaves() {
 	return (
 		<StyledWrapper>
 			<CanvasElement
@@ -12,35 +11,20 @@ export function Example() {
 					near: 1,
 					far: 1000,
 					zoom: 1,
-					position: new three.Vector3(2, 2, 2),
+					position: new three.Vector3(20, 20, 20),
 				}}
 				orbitControls
 				ambientLight
 				pointLight
 				pointLightPosition={new three.Vector3(10, 0, 0)}
 			>
-				<Box />
+				<ParticlesElement amount={200} radius={0.5} separation={5} />
 			</CanvasElement>
 		</StyledWrapper>
 	);
 }
 
-function Box() {
-	const boxRef = useRef<three.Mesh>();
-
-	useFrame((state, delta) => {
-		boxRef.current!.rotation.x += 0.01;
-		boxRef.current!.rotation.y += 0.01;
-	});
-
-	return (
-		<mesh ref={boxRef}>
-			<boxGeometry args={[1, 1, 1]} />
-			<meshStandardMaterial color="#aca" />
-		</mesh>
-	);
-}
-
 const StyledWrapper = styled.section`
 	height: 100vh;
+	width: 100vw;
 `;

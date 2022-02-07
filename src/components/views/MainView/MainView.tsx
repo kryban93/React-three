@@ -36,5 +36,4 @@ const StyledTextWrapper = styled.div`
 	align-items: center;
 	width 100%;
 	color: ${({ theme }) => theme.white}; 
-
 `;

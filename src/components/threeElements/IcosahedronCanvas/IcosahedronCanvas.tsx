@@ -49,4 +49,8 @@ const StyledWrapper = styled.section`
 	width: 100%;
 	display: flex;
 	align-items: center;
+
+	@media screen and (min-width: 1024px) {
+		width: 60%;
+	}
 `;

@@ -11,7 +11,6 @@ export default function ModelsPreview() {
 
 	const selectFunction = (value: string) => {
 		setSelectedModel(value);
-		console.log(value);
 	};
 	return (
 		<StyledWrapper>
